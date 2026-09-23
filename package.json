@@ -1,0 +1,10 @@
+{
+  "name": "planeta-ai",
+  "private": true,
+  "workspaces": ["apps/web", "packages/api-client"],
+  "scripts": {
+    "lint": "npm run lint -w @planeta/web",
+    "typecheck": "npm run typecheck -w @planeta/web",
+    "build": "npm run build -w @planeta/web"
+  }
+}

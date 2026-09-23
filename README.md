@@ -4,7 +4,7 @@ Planeta AI is a private internal system for moving paper curtain orders from ret
 
 ## Current status
 
-**Phase 0 completed. Phase 1 not started.**
+**Phase 0 completed. Phase 1 production foundation in progress.**
 
 The approved planning source of truth is the OpenSpec change [`establish-planeta-ai-foundation`](openspec/changes/establish-planeta-ai-foundation/):
 
@@ -36,7 +36,7 @@ PostgreSQL is the business source of truth; private Storage holds original files
 
 ## Planned repository structure
 
-The repository is intentionally still minimal. Phase 1 will introduce the planned layout:
+The repository now includes the initial production foundation layout:
 
 ```text
 apps/web/            Next.js application
@@ -76,4 +76,6 @@ Secrets, credentials, production PII, and production configuration do not belong
 
 ## Development setup
 
-**TBD — Phase 1 has not started.** No application, local stack, dependencies, or production configuration has been created yet. When implementation begins, setup instructions and non-secret environment examples will be added through the approved OpenSpec tasks.
+The current foundation contains a neutral Next.js placeholder and a FastAPI `GET /health` endpoint. It has no business screens, Auth, database schema, RLS, or production configuration. The isolated [Phase 1 UI prototype](prototypes/phase-1-ui/) remains mock-only.
+
+Requirements: Node.js 20.9+ and Python 3.12+. Run `npm ci`, then `npm run lint`, `npm run typecheck`, and `npm run build` from the repository root. See [API setup](services/api/README.md) for Python install, checks, and local health-server launch. Environment examples contain no credentials; the foundation runs without any Supabase project.

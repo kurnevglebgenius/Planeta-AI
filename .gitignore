@@ -1,0 +1,39 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+
+# JavaScript
+node_modules/
+.npm-cache/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+coverage.xml
+.coverage
+
+# Local and generated artifacts
+.DS_Store
+Thumbs.db
+*.log
+tmp/
+temp/
+supabase/.branches/
+supabase/.profiles/
+supabase/.temp/
+supabase/.env
+contracts/openapi.json
+packages/api-client/src/generated/

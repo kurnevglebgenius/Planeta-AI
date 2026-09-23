@@ -1,0 +1,6 @@
+{
+  "name": "@planeta/api-client",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Reserved for a client generated from FastAPI OpenAPI; no handwritten transport contracts."
+}

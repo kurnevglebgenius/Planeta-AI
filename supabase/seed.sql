@@ -1,0 +1,2 @@
+-- Local/development reference data only.
+-- Intentionally empty: no users, locations, customer data or credentials.
