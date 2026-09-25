@@ -76,6 +76,6 @@ Secrets, credentials, production PII, and production configuration do not belong
 
 ## Development setup
 
-The current foundation contains a neutral Next.js placeholder and a FastAPI `GET /health` endpoint. It has no business screens, Auth, database schema, RLS, or production configuration. The isolated [Phase 1 UI prototype](prototypes/phase-1-ui/) remains mock-only.
+The current Phase 1 work includes Supabase email/password and OWNER TOTP sign-in, a role-aware web shell, an OWNER Employees screen connected to FastAPI, and workforce/access migrations with RLS, audit events, and last-OWNER protection. Order, customer, payment, production, QR, and AI business features remain for later phases. The isolated [Phase 1 UI prototype](prototypes/phase-1-ui/) remains mock-only.
 
-Requirements: Node.js 20.9+ and Python 3.12+. Run `npm ci`, then `npm run lint`, `npm run typecheck`, and `npm run build` from the repository root. See [API setup](services/api/README.md) for Python install, checks, and local health-server launch. Environment examples contain no credentials; the foundation runs without any Supabase project.
+Requirements: Node.js 20.9+ and Python 3.12+. Run `npm ci`, then `npm run lint`, `npm run typecheck`, `npm run build`, and `npm run test:db` from the repository root. The database test applies the migration to in-memory PostgreSQL; a clean Supabase development migration and role-matrix test are still required before deployment. See [API setup](services/api/README.md) for Python install, checks, and local health-server launch. Environment examples contain no credentials; the foundation runs without any Supabase project.
